@@ -28,5 +28,16 @@ public class Main {
         c2.zwiekszLiczbeWypozyczen();
         c2.zmniejszLiczbeWypozyczen();
         c1.zmniejszLiczbeWypozyczen();
+
+        Biblioteka biblioteka = new Biblioteka(7);
+
+        biblioteka.dodajKsiazke(k1);
+        biblioteka.dodajKsiazke(k2);
+        biblioteka.dodajKsiazke(k3);
+
+        biblioteka.wypiszDostepneKsiazki();
+        biblioteka.znajdzKsiazkePoTytule("Diuna");
+        biblioteka.znajdzKsiazkePoTytule("Ferdydurke");
+        biblioteka.policzDostepneKsiazki();
     }
 }

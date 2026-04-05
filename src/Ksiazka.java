@@ -35,4 +35,10 @@ public class Ksiazka {
             System.out.println("Książka \"" + tytul + "\" nie została zwrócona. ");
         }
     }
+    public String getTytul() {
+        return tytul;
+    }
+    public boolean isDostepna() {
+        return dostepna;
+    }
 }
