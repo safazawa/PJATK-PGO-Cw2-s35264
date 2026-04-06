@@ -50,4 +50,34 @@ public class Biblioteka {
         System.out.println("Liczba dostępnych książek: " + licznik);
         return licznik;
     }
-}
+    public void wypozyczKsiazke(String tytul, Czytelnik czytelnik) {
+        for (int i = 0; i < liczbaKsiazek; i++) {
+            if (ksiazki[i].getTytul().equalsIgnoreCase(tytul)) {
+                if (ksiazki[i].isDostepna()) {
+                    ksiazki[i].wypozycz();
+                    czytelnik.zwiekszLiczbeWypozyczen();
+                } else {
+                    System.out.println("Ksiazka \"" + tytul + "\" jest już wypożyczona.");
+                }
+                return;
+                }
+            }
+        System.out.println("Nie znaleziono książki o tytule: " + tytul);
+        }
+
+        public void zwrocKsiazke(String tytul, Czytelnik czytelnik) {
+        for (int i = 0; i < liczbaKsiazek; i++) {
+            if (ksiazki[i].getTytul().equalsIgnoreCase(tytul)) {
+                if (!ksiazki[i].isDostepna()) {
+                    ksiazki[i].zwroc();
+                    czytelnik.zmniejszLiczbeWypozyczen();
+                } else {
+                    System.out.println("Książka \"" + tytul + "\" nie była wypożyczona.");
+                }
+                return;
+            }
+        }
+        System.out.println("Nie znaleziono książki o tytule: " + tytul);
+        }
+    }
+

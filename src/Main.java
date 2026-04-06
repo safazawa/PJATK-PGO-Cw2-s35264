@@ -29,6 +29,7 @@ public class Main {
         c2.zmniejszLiczbeWypozyczen();
         c1.zmniejszLiczbeWypozyczen();
 
+        //Zadanie 3//
         Biblioteka biblioteka = new Biblioteka(7);
 
         biblioteka.dodajKsiazke(k1);
@@ -39,5 +40,25 @@ public class Main {
         biblioteka.znajdzKsiazkePoTytule("Diuna");
         biblioteka.znajdzKsiazkePoTytule("Ferdydurke");
         biblioteka.policzDostepneKsiazki();
+
+        //Zadanie 4//
+        biblioteka.wypozyczKsiazke("Wiedźmin", c1);
+        biblioteka.wypozyczKsiazke("Chłopki. Opowieść o naszych babkach", c2);
+        biblioteka.wypozyczKsiazke("Diuna", c1);
+
+        biblioteka.wypiszDostepneKsiazki();
+        biblioteka.policzDostepneKsiazki();
+
+        c1.wypiszDane();
+        c2.wypiszDane();
+
+        biblioteka.zwrocKsiazke("Gra o Tron", c2);
+        biblioteka.zwrocKsiazke("Diuna", c1);
+
+        biblioteka.wypiszDostepneKsiazki();
+        biblioteka.policzDostepneKsiazki();
+
+        c1.wypiszDane();
+        c2.wypiszDane();
     }
 }
